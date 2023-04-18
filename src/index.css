@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;1,700&display=swap');
+
+:root {
+  margin: auto;
+  width: 60%;
+  
+  font-family: 'PT Sans', sans-serif;
+  background-color: cadetblue;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+}
+
+
+
