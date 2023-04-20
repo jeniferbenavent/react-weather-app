@@ -1,4 +1,5 @@
 import { WeatherDataProps } from '../../interfaces/weatherTypes';
+import WeatherIcon from '../WeatherIcon/WeatherIcon';
 import './WeatherDataCard.css';
 
 function WeatherData(props: WeatherDataProps) {
@@ -6,7 +7,7 @@ function WeatherData(props: WeatherDataProps) {
   if (!props.weatherData) {
     return null;
   }
-
+  
   return (
     <>
       <div className="weather-card">
@@ -16,7 +17,7 @@ function WeatherData(props: WeatherDataProps) {
             <div className="weather-card-info-city">{props.weatherData.name}</div>
             <div className="weather-card-info-icon-degrees">
               <div className="weather-card-info-icon">
-                <img src="/src/assets/icons/cloudy.png" alt="Icon that indicates the weather of the city." width="95px"/>
+                <WeatherIcon weatherId={props.weatherData.weather[0].id}/>
               </div>
               <div className="weather-card-info-degrees">{Math.trunc(props.weatherData.main.temp)}ºC</div>
             </div>

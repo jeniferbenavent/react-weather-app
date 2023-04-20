@@ -6,6 +6,7 @@ export type WeatherApiResponse = {
     feels_like: number;
   };
   weather: {
+    id: number;
     description: string;
   }[];
 };
@@ -20,4 +21,8 @@ export type WeatherDataProps = {
 
 export type TitleProps = {
   text: string;
+};
+
+export type WeatherIconProps = {
+  weatherId: number;
 };

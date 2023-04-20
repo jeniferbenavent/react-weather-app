@@ -3,8 +3,8 @@ import axios from 'axios';
 import Title from '../../components/Title/Title';
 import SearchBar from '../../components/SearchBar/SearchBar';
 import WeatherDataCard from '../../components/WeatherDataCard/WeatherDataCard';
-import { WeatherApiResponse } from '../../interfaces/weatherTypes';
 import Footer from '../../components/Footer/Footer';
+import { WeatherApiResponse } from '../../interfaces/weatherTypes';
 
 function Home() {
   const [citySearched, setCitySearched] = useState<string>('');
@@ -16,6 +16,7 @@ function Home() {
       try {
         const url = `${import.meta.env.VITE_API_BASE_URL}?lat=${latitude}&lon=${longitude}&appid=${import.meta.env.VITE_API_KEY}&units=metric`;
         const { data } = await axios.get(url);
+        
         setWeatherData({
           name: data.name,
           main: data.main,
