@@ -42,3 +42,11 @@ h4 {
   font-size: 5vw;
   margin-left: 30px;
 }
+
+.weather-card-max-minimum, 
+.weather-card-more-info-humidity, 
+.weather-card-more-info-wind, 
+.weather-card-more-info-preassure{
+  display: flex;
+  flex-direction: row;
+}

@@ -16,7 +16,7 @@ function Home() {
       try {
         const url = `${import.meta.env.VITE_API_BASE_URL}?lat=${latitude}&lon=${longitude}&appid=${import.meta.env.VITE_API_KEY}&units=metric`;
         const { data } = await axios.get(url);
-        
+        console.log(url);
         setWeatherData({
           name: data.name,
           main: data.main,

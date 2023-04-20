@@ -99,11 +99,8 @@ function WeatherIcon(props: WeatherIconProps) {
     default:
      source = "src/assets/images/weather/sunny.svg";
   }
-  return (
-    <>
-     <img src={source} alt="Icon that indicates the weather of the city." width="95px"/>
-    </>
-  );
+  return <img src={source} alt="Icon that indicates the weather of the city." className={props.big ? "bigIcon" : "smallIcon"}/>
+
 }
 
 export default WeatherIcon;

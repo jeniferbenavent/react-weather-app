@@ -4,6 +4,10 @@ export type WeatherApiResponse = {
   main: {
     temp: number;
     feels_like: number;
+    temp_min: 16.68,
+    temp_max: number,
+    pressure: number,
+    humidity: number
   };
   weather: {
     id: number;
@@ -25,4 +29,5 @@ export type TitleProps = {
 
 export type WeatherIconProps = {
   weatherId: number;
+  big?: boolean;
 };
