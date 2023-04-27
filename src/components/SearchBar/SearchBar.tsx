@@ -23,7 +23,7 @@ function SearchBar(props: SearchBarProps) {
           <button type="submit" className="search-btn">
             <img src="src/assets/icons/placeholder.png" width="25px"/>
           </button>
-        <input type="text" className="search-div" placeholder="Search city..." value={city} onInput={handleInputValueChange} />
+        <input type="text" className="search-div" placeholder="Valencia, Seoul, Tokyo..." value={city} onInput={handleInputValueChange} />
       </form>
     </div>
   );

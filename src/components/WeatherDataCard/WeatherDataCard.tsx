@@ -1,6 +1,7 @@
 import { WeatherDataProps } from '../../interfaces/weatherTypes';
 import WeatherIcon from '../WeatherIcon/WeatherIcon';
 import './WeatherDataCard.css';
+import moment from 'moment';
 
 function WeatherData(props: WeatherDataProps) {
 
@@ -11,49 +12,23 @@ function WeatherData(props: WeatherDataProps) {
   return (
     <>
       <div className="weather-card">
-        <h4 className="weather-card-title">Current Weather</h4>
-        <div className="weather-card-info">
-          <div className="weather-card-info-col1">
-            <div className="weather-card-info-city">{props.weatherData.name}</div>
-            <div className="weather-card-info-icon-degrees">
-              <div className="weather-card-info-icon">
-                <WeatherIcon weatherId={props.weatherData.weather[0].id} big/>
-              </div>
-              <div className="weather-card-info-degrees">{Math.trunc(props.weatherData.main.temp)}ºC</div>
-            </div>
-            <div className="weather-card-info-name">{props.weatherData.weather[0].description}</div>
-          </div>
-         
-          <div className="weather-card-info-col2">
-            <p className="weather-card-title">Feels like {props.weatherData.main.feels_like}</p>
-            <div className="weather-card-max-minimum">
-              <div className="weather-card-max">
-                <img src="src\assets\icons\placeholder.png" alt='Maximum temperature icon' width={30}/>
-                {Math.trunc(props.weatherData.main.temp_max)}ºC
-              </div>
-              <div className="weather-card-minimum">
-                <img src="src\assets\icons\placeholder.png" alt='Minimum temperature icon' width={30}/>
-                {Math.trunc(props.weatherData.main.temp_min)}ºC
-              </div>
-            </div>
-            <div className="weather-card-humidity-wind-preassure">
-              <div className="weather-card-more-info-humidity">
-                <img src="src\assets\icons\placeholder.png" alt='Humidity icon' width={30}/>
-                <p>Humidity</p>
-                {Math.trunc(props.weatherData.main.temp_max)}ºC
-              </div>
-              <div className="weather-card-more-info-wind">
-                <img src="src\assets\icons\placeholder.png" alt='Wind icon' width={30}/>
-                <p>Wind</p>
-                {Math.trunc(props.weatherData.main.temp_max)}ºC
-              </div>
-              <div className="weather-card-more-info-preassure">
-                <img src="src\assets\icons\placeholder.png" alt='Preassure icon' width={30}/>
-                <p>Preassure</p>
-                {Math.trunc(props.weatherData.main.temp_max)}ºC
-              </div>
-            </div>
-          </div>
+        <div className="weather-card-dayTime">
+        <h3 className="weather-card-dayTime-text">{moment().format('dddd').slice(0, 3)} {moment().format('Do')}</h3>
+          <p>Hoy en {props.weatherData.name}</p>
+        </div>
+
+        <div className="weather-card-icon">
+          <WeatherIcon weatherId={props.weatherData.weather[0].id} big />
+          <p className="weather-card-description">{props.weatherData.weather[0].description}</p>
+        </div>
+
+        <div className="weather-card-degrees">
+          <h2 className="weather-card-degrees-text">
+            {Math.trunc(props.weatherData.main.temp)}ºC
+          </h2>
+          <p className="weather-card-degrees-feelsLike">
+            Feels like {props.weatherData.main.feels_like}
+          </p>
         </div>
       </div>
     </>

@@ -1,11 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;500&display=swap');
+
+html, body {
+  width: 70%;
+  margin: 0;
+  padding: 0;
+}
 
 :root {
-  margin: auto;
-  width: 60%;
-  
-  font-family: 'PT Sans', sans-serif;
-  background-color: cadetblue;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Nunito', sans-serif;
+  background: rgb(71,157,199);
+  background: linear-gradient(90deg, rgba(71,157,199,1) 0%, rgba(103,197,167,1) 100%);
 }
 
 a {

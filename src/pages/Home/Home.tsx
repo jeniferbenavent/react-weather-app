@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import Title from '../../components/Title/Title';
 import SearchBar from '../../components/SearchBar/SearchBar';
 import WeatherDataCard from '../../components/WeatherDataCard/WeatherDataCard';
+import ForecastCard from '../../components/ForecastCard/ForecastCard';
 import Footer from '../../components/Footer/Footer';
 import { WeatherApiResponse } from '../../interfaces/weatherTypes';
 
@@ -45,7 +45,7 @@ function Home() {
     if (!citySearched) {
       getLocation();
     }
-  }, [citySearched]);
+  }, []);
 
   const getWeather = async (city: string) => {
     try {
@@ -65,9 +65,9 @@ function Home() {
 
   return (
     <>
-      <Title text='React Weather App'/>
       <SearchBar onSearchSubmit={ getWeather } />
       <WeatherDataCard weatherData={ weatherData }/>
+      <ForecastCard />
       <Footer />
     </>
   );

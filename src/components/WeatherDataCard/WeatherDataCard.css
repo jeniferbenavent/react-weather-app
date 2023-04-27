@@ -1,52 +1,28 @@
 .weather-card{
-  background-color: white;
-  border: 0;
-  border-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  text-decoration: none;
-
-  padding: 30px;
-  height: 300px;
-  margin-top: 50px;
-}
-
-.weather-card-title{
-
-  margin-bottom: 30px;
-
-}
-
-.weather-card-info {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
-.weather-card-info-col1 {
-  grid-column: 1;
-}
+.weather-card-dayTime,
+.weather-card-icon,
+.weather-card-degrees{
+  text-align: center;
+  color: white;
+  align-self: center;
+} 
 
-.weather-card-info-col2 {
-  grid-column: 2;
-}
-
-h4 {
+.weather-card-degrees-text{
+  font-size: 4em;
   margin: 0;
 }
 
-.weather-card-info-icon-degrees{
-  display: flex;
-  align-items: center;
+.weather-card-dayTime-text{
+  font-size: 2.5em;
+  margin: 0;
 }
 
-.weather-card-info-degrees{
-  font-size: 5vw;
-  margin-left: 30px;
-}
+.weather-card-description{
 
-.weather-card-max-minimum, 
-.weather-card-more-info-humidity, 
-.weather-card-more-info-wind, 
-.weather-card-more-info-preassure{
-  display: flex;
-  flex-direction: row;
+  margin: 0;
+
 }
