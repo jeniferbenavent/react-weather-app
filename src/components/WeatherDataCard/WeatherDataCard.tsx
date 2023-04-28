@@ -1,7 +1,7 @@
+import moment from 'moment';
 import { WeatherDataProps } from '../../interfaces/weatherTypes';
 import WeatherIcon from '../WeatherIcon/WeatherIcon';
 import './WeatherDataCard.css';
-import moment from 'moment';
 
 function WeatherData(props: WeatherDataProps) {
 
@@ -27,7 +27,7 @@ function WeatherData(props: WeatherDataProps) {
             {Math.trunc(props.weatherData.main.temp)}ºC
           </h2>
           <p className="weather-card-degrees-feelsLike">
-            Feels like {props.weatherData.main.feels_like}
+            Feels like {Math.trunc(props.weatherData.main.feels_like)}ºC
           </p>
         </div>
       </div>
