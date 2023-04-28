@@ -17,20 +17,13 @@ function SearchBar(props: SearchBarProps) {
     setCity(event.currentTarget.value);
   }, []);
   
-    {/*
-    <div className="div-main-search">
-      <form >
-          <button type="submit" className="search-btn">
-            <img src="src/assets/icons/placeholder.png" width="25px"/>
-          </button>
-        <input type="text" className="search-div" placeholder="Valencia, Seoul, Tokyo..." value={city} onInput={handleInputValueChange} />
-      </form>
-  </div>*/}
   return (
     <>
       <form onSubmit={ handleInputChange }>
         <input type="search" required value={city} onInput={handleInputValueChange} />
-        <i className="fa fa-search"></i>
+        <button type="submit">
+          <i className="fa fa-search"></i>
+        </button>
       </form>
     </>
 
