@@ -19,7 +19,7 @@ function SearchBar(props: SearchBarProps) {
   
     {/*
     <div className="div-main-search">
-      <form onSubmit={ handleInputChange }>
+      <form >
           <button type="submit" className="search-btn">
             <img src="src/assets/icons/placeholder.png" width="25px"/>
           </button>
@@ -28,8 +28,8 @@ function SearchBar(props: SearchBarProps) {
   </div>*/}
   return (
     <>
-      <form action="">
-        <input type="search" required />
+      <form onSubmit={ handleInputChange }>
+        <input type="search" required value={city} onInput={handleInputValueChange} />
         <i className="fa fa-search"></i>
       </form>
     </>
