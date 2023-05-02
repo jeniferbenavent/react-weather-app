@@ -8,7 +8,7 @@ function WeatherData(props: WeatherDataProps) {
   if (!props.weatherData) {
     return null;
   }
-
+  console.log(props.weatherData);
   return (
     <>
       <div className="weather-card">

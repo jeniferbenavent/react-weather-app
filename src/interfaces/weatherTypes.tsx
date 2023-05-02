@@ -1,4 +1,4 @@
-export type WeatherApiResponse = {
+/*export type WeatherApiResponse = {
   cityName?: string;
   name: string;
   main: {
@@ -9,14 +9,44 @@ export type WeatherApiResponse = {
     id: number;
     description: string;
   }[];
-};
+};*/
+
+export type WeatherData = {
+  cityName?: string;
+  name: string;
+  currentTemp: number;
+  forecast: { day: string; temp: number }[];
+  main: {
+    temp: number,
+    feels_like: number
+  };
+  weather: {
+    id: number;
+    description: string;
+  }[];
+}
+
+export type ForecastData = {
+  cityName?: string;
+  name: string;
+  currentTemp: number;
+  forecast: { day: string; temp: number }[];
+  main: {
+    temp: number,
+    feels_like: number
+  };
+  weather: {
+    id: number;
+    description: string;
+  }[];
+}
 
 export type SearchBarProps = {
-  onSearchSubmit: (value: string) => void;
-};
+  onSubmit: (input: string) => void;
+}
 
 export type WeatherDataProps = {
-  weatherData: WeatherApiResponse | null;
+  weatherData: WeatherData | null;
 };
 
 export type WeatherIconProps = {
