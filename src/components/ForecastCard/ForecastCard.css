@@ -5,10 +5,12 @@
 }
 
 .forecast-card{
-  margin-top: 60px;
+  margin-top: 5vh;
+  margin-left: 5vw;
+  margin-right: 5vw;
   padding: 40px;
-  background-color: white;
-  width: 50vw;
+  background-color: rgb(255, 255, 255);
+  width: 100vw;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
