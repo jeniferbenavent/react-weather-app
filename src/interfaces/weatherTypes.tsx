@@ -2,7 +2,7 @@ export type WeatherData = {
   cityName?: string;
   name: string;
   currentTemp: number;
-  forecast: { day: string; temp: number }[];
+  forecast: { day: string; temp: number; id: number; description: string }[];
   main: {
     temp: number,
     feels_like: number
@@ -24,4 +24,5 @@ export type WeatherDataProps = {
 export type WeatherIconProps = {
   weatherId: number;
   big?: boolean;
+  title: string;
 };

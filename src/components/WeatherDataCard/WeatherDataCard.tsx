@@ -8,17 +8,17 @@ function WeatherData(props: WeatherDataProps) {
   if (!props.weatherData) {
     return null;
   }
+  
   return (
     <>
       <div className="weather-card">
         <div className="weather-card-dayTime">
-        <h3 className="weather-card-dayTime-text">{moment().format('dddd').slice(0, 3)} {moment().format('Do')}</h3>
+        <h3 className="weather-card-dayTime-text">{ moment().format('dddd').slice(0, 3) } { moment().format('Do') }</h3>
           <p>Hoy en {props.weatherData.name}</p>
         </div>
 
         <div className="weather-card-icon">
-          <WeatherIcon weatherId={props.weatherData.weather[0].id} big />
-          <p className="weather-card-description">{props.weatherData.weather[0].description}</p>
+          <WeatherIcon weatherId={props.weatherData.weather[0].id} big title={props.weatherData.weather[0].description}/>
         </div>
 
         <div className="weather-card-degrees">

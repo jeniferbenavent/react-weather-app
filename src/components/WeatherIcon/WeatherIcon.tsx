@@ -4,7 +4,6 @@ import "./WeatherIcon.css"
 function WeatherIcon(props: WeatherIconProps) {
 
   let source = "";
-
   switch (props.weatherId) {
     
     // Clear
@@ -99,7 +98,7 @@ function WeatherIcon(props: WeatherIconProps) {
     default:
      source = "src/assets/images/weather/sunny.svg";
   }
-  return <img src={source} alt="Icon that indicates the weather of the city." className={props.big ? "bigIcon" : "smallIcon"}/>
+  return <img src={source} alt="Icon that indicates the weather of the city." className={props.big ? "bigIcon" : "smallIcon"} title={props.title}/>
 
 }
 

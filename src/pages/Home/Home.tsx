@@ -10,19 +10,6 @@ function Home() {
   const [weatherData, setWeatherData] = useState<WeatherData | null>(null);
   const [location, setLocation] = useState<{ lat: number; lon: number } | null>(null);
 
-  useEffect(() => {
-    navigator.geolocation.getCurrentPosition(
-      (position) => {
-        setLocation({
-          lat: position.coords.latitude,
-          lon: position.coords.longitude,
-        });
-      },
-      (error) => console.error(error)
-    );
-  }, []);
-
-
   const getWeatherData = async (location?: { lat: number; lon: number }) => {
     let url = `${import.meta.env.VITE_API_BASE_URL}weather?units=metric&appid=${import.meta.env.VITE_API_KEY}`;
 
@@ -51,12 +38,32 @@ function Home() {
       forecast: forecastData.list.slice(0, 7).map((forecastItem: any) => ({
         day: forecastItem.dt_txt,
         temp: forecastItem.main.temp,
+        id: forecastItem.weather[0].id,
+        description: forecastItem.weather[0].description
       })),
       main: data.main,
-      weather: data.weather
+      weather: data.weather,
     };
+    console.log(forecastData.list.slice(0, 7));
+    
     setWeatherData(weatherData);
   };
+
+  const handleCityChange = (city: string) => {
+    setCitySearched(city);
+  };
+  
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        setLocation({
+          lat: position.coords.latitude,
+          lon: position.coords.longitude,
+        });
+      },
+      (error) => console.error(error)
+    );
+  }, []);
 
   useEffect(() => {
     if (location) {
@@ -66,9 +73,6 @@ function Home() {
     }
   }, [location, citySearched]);
 
-  const handleCityChange = (city: string) => {
-    setCitySearched(city);
-  };
 
   return (
     <>

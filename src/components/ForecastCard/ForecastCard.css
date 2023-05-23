@@ -18,15 +18,3 @@
   margin: 0;
   margin-bottom: 34px;
 }
-
-.forecast-card-info{
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  color: rgb(6, 6, 137);
-}
-
-.days-of-week{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
