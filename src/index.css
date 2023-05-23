@@ -12,11 +12,8 @@ html, body {
   justify-content: center;
   align-items: center;
   font-family: 'Nunito', sans-serif;
-  /*background: rgb(71,157,199);
-  background: linear-gradient(90deg, rgba(71,157,199,1) 0%, rgba(103,197,167,1) 100%);*/
-  background: rgb(94,184,234);
-  background: linear-gradient(0deg, rgba(94,184,234,1) 0%, rgba(90,98,169,1) 100%);
-  
+  background: rgb(71,157,199);
+  background: linear-gradient(90deg, rgba(71,157,199,1) 0%, rgba(103,197,167,1) 100%);
 }
 
 a {

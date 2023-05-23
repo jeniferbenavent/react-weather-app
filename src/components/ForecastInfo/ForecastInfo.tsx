@@ -7,11 +7,13 @@ function ForecastInfo(props: WeatherDataProps) {
   if (!props.weatherData) {
     return null;
   }
-  
   const daysOfWeek = ['MON','THU','WED','TUE','FRI','SAT','SUN']
+  const today = new Date().getDay();
+  const reorderedDaysOfWeek = [...daysOfWeek.slice(today), ...daysOfWeek.slice(0, today)];
+
   return (
     <div className="forecast-card-info">
-      {daysOfWeek.map((day, index) => (
+      {reorderedDaysOfWeek.map((day, index) => (
         <div className={`days-of-week ${day.toLowerCase()}`} key={index}>
           {day}
           {props.weatherData && 
