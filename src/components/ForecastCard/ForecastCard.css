@@ -6,8 +6,6 @@
 
 .forecast-card{
   margin-top: 5vh;
-  margin-left: 5vw;
-  margin-right: 5vw;
   padding: 40px;
   background-color: rgb(255, 255, 255);
   width: 100vw;
@@ -18,5 +16,5 @@
 .forecast-card-title{
   color: rgb(7, 7, 117);
   margin: 0;
-  margin-bottom: 34px;
+  margin-bottom: 6%;
 }

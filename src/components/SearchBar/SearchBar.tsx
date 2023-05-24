@@ -24,7 +24,7 @@ function SearchBar(props: SearchBarProps) {
       <div className="search__input-container">
         <input className="search__input" type="search" placeholder="Tokyo, Paris, Sevilla..." value={city} onInput={handleInputValueChange} />
         <button type="submit">
-          <i className="fa fa-search"></i>
+        <img src="src/assets/images/busqueda.png" alt="Search icon"/>
         </button>
       </div>
     </form>
