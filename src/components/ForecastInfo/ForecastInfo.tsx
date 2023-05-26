@@ -7,7 +7,7 @@ function ForecastInfo(props: WeatherDataProps) {
   if (!props.weatherData) {
     return null;
   }
-  const daysOfWeek = ['MON','THU','WED','TUE','FRI','SAT','SUN']
+  const daysOfWeek = ['MON','TUE','WED','THU','FRI','SAT','SUN']
   const today = new Date().getDay();
   const reorderedDaysOfWeek = [...daysOfWeek.slice(today), ...daysOfWeek.slice(0, today)];
 

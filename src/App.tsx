@@ -1,4 +1,3 @@
-import React from "react";
 import { useEffect, useState } from 'react';
 import { WeatherData } from "./interfaces/weatherTypes";
 import SearchBar from "./components/SearchBar/SearchBar";

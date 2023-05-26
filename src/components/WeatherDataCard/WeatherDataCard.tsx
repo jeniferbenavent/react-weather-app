@@ -12,7 +12,7 @@ function WeatherData(props: WeatherDataProps) {
   return (
     <div className="weather-card">
       <div className="weather-card-dayTime">
-      <h3 className="weather-card-dayTime-text">{ moment().format('dddd').slice(0, 3) } { moment().format('Do') }</h3>
+        <h3 className="weather-card-dayTime-text">{ moment().format('dddd').slice(0, 3) } { moment().format('Do') }</h3>
         <p>Today in {props.weatherData.name}</p>
       </div>
 
