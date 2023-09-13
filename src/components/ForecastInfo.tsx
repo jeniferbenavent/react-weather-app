@@ -1,8 +1,9 @@
-import { WeatherDataProps } from "../../interfaces/weatherTypes";
-import WeatherIcon from "../WeatherIcon/WeatherIcon";
-import "./ForecastInfo.css"
+import "../styles/ForecastInfo.css"
 
-function ForecastInfo(props: WeatherDataProps) {
+import { WeatherDataProps } from "../interfaces/weatherTypes";
+import { WeatherIcon } from "./WeatherIcon";
+
+export const ForecastInfo = (props: WeatherDataProps) => {
   
   if (!props.weatherData) {
     return null;
@@ -27,5 +28,3 @@ function ForecastInfo(props: WeatherDataProps) {
     </div>
   );
 }
-
-export default ForecastInfo;

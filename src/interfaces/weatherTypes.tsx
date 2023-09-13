@@ -1,4 +1,4 @@
-export type WeatherData = {
+export interface WeatherData {
   cityName?: string;
   name: string;
   currentTemp: number;
@@ -13,15 +13,15 @@ export type WeatherData = {
   }[];
 }
 
-export type SearchBarProps = {
+export interface SearchBarProps {
   onSearchSubmit: (value: string) => void;
 };
 
-export type WeatherDataProps = {
+export interface WeatherDataProps  {
   weatherData: WeatherData | null;
 };
 
-export type WeatherIconProps = {
+export interface WeatherIconProps  {
   weatherId: number;
   big?: boolean;
   title: string;

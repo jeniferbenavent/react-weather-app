@@ -1,8 +1,10 @@
-import { FormEvent, useCallback, useState } from "react";
-import { SearchBarProps } from "../../interfaces/weatherTypes";
-import "./SearchBar.css"
+import "../styles/SearchBar.css"
 
-function SearchBar(props: SearchBarProps) {
+import { FormEvent, useCallback, useState } from "react";
+
+import { SearchBarProps } from "../interfaces/weatherTypes";
+
+export const SearchBar = (props: SearchBarProps) => {
   const [city, setCity] = useState(''); // Ciudad escrita por el usuario
 
   const handleInputChange = useCallback((event: FormEvent<HTMLFormElement>) => {
@@ -30,5 +32,3 @@ function SearchBar(props: SearchBarProps) {
     </form>
   );
 }
-
-export default SearchBar;

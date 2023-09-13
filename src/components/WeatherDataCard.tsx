@@ -1,9 +1,10 @@
-import moment from 'moment';
-import { WeatherDataProps } from '../../interfaces/weatherTypes';
-import WeatherIcon from '../WeatherIcon/WeatherIcon';
-import './WeatherDataCard.css';
+import '../styles/WeatherDataCard.css';
 
-function WeatherData(props: WeatherDataProps) {
+import { WeatherDataProps } from '../interfaces/weatherTypes';
+import { WeatherIcon } from './WeatherIcon';
+import moment from 'moment';
+
+export const WeatherDataCard = (props: WeatherDataProps) => {
 
   if (!props.weatherData) {
     return null;
@@ -31,5 +32,3 @@ function WeatherData(props: WeatherDataProps) {
     </div>
   );
 }
-
-export default WeatherData;

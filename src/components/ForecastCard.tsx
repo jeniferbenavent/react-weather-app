@@ -1,8 +1,9 @@
-import { WeatherDataProps } from "../../interfaces/weatherTypes";
-import ForecastInfo from "../ForecastInfo/ForecastInfo";
-import "./ForecastCard.css"
+import "../styles/ForecastCard.css"
 
-function ForecastCard(props: WeatherDataProps) {
+import { ForecastInfo } from "./ForecastInfo";
+import { WeatherDataProps } from "../interfaces/weatherTypes";
+
+export const ForecastCard = (props: WeatherDataProps) => {
   
   if (!props.weatherData) {
     return null;
@@ -19,5 +20,3 @@ function ForecastCard(props: WeatherDataProps) {
     </section>
   );
 }
-
-export default ForecastCard;

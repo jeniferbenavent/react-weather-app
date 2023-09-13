@@ -1,11 +1,10 @@
-import { WeatherIconProps } from "../../interfaces/weatherTypes";
-import "./WeatherIcon.css"
+import "../styles/WeatherIcon.css";
 
-function WeatherIcon(props: WeatherIconProps) {
+import { WeatherIconProps } from "../interfaces/weatherTypes";
 
+export const WeatherIcon = (props: WeatherIconProps) => {
   let source = "";
   switch (props.weatherId) {
-    
     // Clear
     case 800:
       source = "/static/images/weather/sunny.svg";
@@ -14,11 +13,11 @@ function WeatherIcon(props: WeatherIconProps) {
     // Cloud
     case 801:
     case 802:
-     source = "/static/images/weather/partly-cloudy.svg";
+      source = "/static/images/weather/partly-cloudy.svg";
       break;
     case 803:
     case 804:
-     source = "/static/images/weather/cloudy.svg";
+      source = "/static/images/weather/cloudy.svg";
       break;
 
     // Rain
@@ -27,14 +26,14 @@ function WeatherIcon(props: WeatherIconProps) {
     case 520:
     case 521:
     case 511:
-     source = "/static/images/weather/rain.svg";
+      source = "/static/images/weather/rain.svg";
       break;
     case 502:
     case 503:
     case 504:
     case 522:
     case 531:
-     source = "/static/images/weather/heavy-rain.svg";
+      source = "/static/images/weather/heavy-rain.svg";
       break;
 
     // Drizzle
@@ -47,7 +46,7 @@ function WeatherIcon(props: WeatherIconProps) {
     case 313:
     case 314:
     case 321:
-     source = "/static/images/weather/rain.svg";
+      source = "/static/images/weather/rain.svg";
       break;
 
     // Thunderstorm
@@ -61,7 +60,7 @@ function WeatherIcon(props: WeatherIconProps) {
     case 230:
     case 231:
     case 232:
-     source = "/static/images/weather/thunderstorm.svg";
+      source = "/static/images/weather/thunderstorm.svg";
       break;
 
     // Snow
@@ -75,10 +74,10 @@ function WeatherIcon(props: WeatherIconProps) {
     case 620:
     case 621:
     case 622:
-     source = "/static/images/weather/snow.svg";
+      source = "/static/images/weather/snow.svg";
       break;
     case 611:
-     source = "/static/images/weather/sleet.svg";
+      source = "/static/images/weather/sleet.svg";
       break;
 
     // Atmosphere
@@ -92,14 +91,18 @@ function WeatherIcon(props: WeatherIconProps) {
     case 762:
     case 771:
     case 781:
-     source = "/static/images/weather/haze.svg";
+      source = "/static/images/weather/haze.svg";
       break;
 
     default:
-     source = "/static/images/weather/sunny.svg";
+      source = "/static/images/weather/sunny.svg";
   }
-  return <img src={source} alt="Icon that indicates the weather of the city." className={props.big ? "bigIcon" : "smallIcon"} title={props.title}/>
-
-}
-
-export default WeatherIcon;
+  return (
+    <img
+      src={source}
+      alt="Icon that indicates the weather of the city."
+      className={props.big ? "bigIcon" : "smallIcon"}
+      title={props.title}
+    />
+  );
+};
